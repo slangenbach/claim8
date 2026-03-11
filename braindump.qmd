@@ -97,7 +97,7 @@ title: "claim8"
 - Reasoning: Benefits are low (efficiency?), risk are high (legally binding documents containing false KPIs distributions) and processed is deterministic
 - Advice: Don't use AI within the process - use AI to build tools to automate it instead
 
-### Customer Care Insights for Heartbeat App
+### Customer Care Insights for app
 
 - Problem: Despite plethora of customer care tickets, very little insight is extracted to improve app
 - Assumptions:
