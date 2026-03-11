@@ -1,0 +1,116 @@
+---
+title: "claim8"
+---
+
+# Braindump
+
+## AI Strategy
+
+### Create a team on AI use case handling?
+
+- Building a small (<=3 people) team in the beginning is helpful to scale human processes, i.e. stakeholder management
+- It also helps with discussing ideas and getting other perspectives on issues
+- Implementation of use cases should be left to individual departments with minimal support from centralized team
+
+### Short/Mid/Long-term goals of position
+
+#### Short
+
+- Define and communicate purpose of AI for company
+- Define framework to identify, evaluate and prioritize use cases
+- Identify and meet key stakeholders
+- Get visibility as primary contact for AI
+- Build knowledge about key departments/processes in company
+- Compile initial use case portfolio
+
+#### Mid
+
+- Create value from AI by implementing quick wins
+- Enable departments/teams/individuals to implement AI solutions without relying on internal support
+- Create strong (personal) relationships to stakeholders
+
+#### Long
+
+- Enable company to get quantifiable benefit from using AI
+- Render position superfluous
+
+### Business areas to focus on
+
+- Selection of business areas depends on opportunity (in terms of impact), feasibility (willingness to collaborate, quality of data, etc.) and risk (what is the worst outcome if AI is wrong)
+- Candidates:
+    - Support/Custom Care
+    - Software Engineering/IT
+    - potentially HR
+- Reasoning:
+    - Support/Custom Care: Extensive use of text (written or spoken); immense load on employees; opportunity to delight customers on touch points with company; opportunity to gain insights for continuous improve
+    - Software Engineering/IT: Opportunity to do *more with less*; low barrier to adoption; low cost
+    - HR: Potentially standardized processes; extensive use of text
+
+### KPIs
+
+- Engagement: Buy-in, collaboration, budget allocation
+- Impact: Economic value identified (use cases) / realized (implementations)
+- Sentiment: Clarify of strategy, confidence in strategy, value from AI
+
+
+### Build-vs-buy decisions
+
+- Timeline for building vs buying
+- Total cost of ownership (build, run, maintain)
+- Potential lock-in effects
+- Is this a commodity yet?
+
+### Communication with stakeholders
+
+#### General
+
+- *Transparency is the default* approach; Use case portfolio, wiki pages, meetings minutes openly accessible
+- Weekly blog? posts on developments?
+
+#### C-level
+
+- Fit in to their meeting structure, cadence and reporting needs
+
+#### TechOps
+
+- Meet regularly with key stakeholders to update in person
+
+#### Other
+
+- tbd
+
+## AI Lifecycle
+
+### Target agreements
+
+- Problem: Administrative burden for VP and HR
+- Assumptions:
+    - KPI distributions change infrequently (every quarter or less often)
+    - Approval of VP is required for legal reasons and can't be automated away
+        - If not, approval can be replaced by retrieving correct, active KPI distribution from database directly
+    - Preparation of legal document is about placing selected KPI distributions into the correct sections
+- Approach:
+    - Define baseline for current process: How often does it run, how much time does it take end-to-end, how much time/effort is spent by VP/HR
+    - Employee is created in HR system -> look up corresponding KPI distribution in Google Sheet (or plain old database?) -> Create weekly? batch job for approval and sent notification to VP -> Upon approval, create new legal document from template and render KPIs in correct sections -> Send legal document to employee for electronic signature
+    - Whenever distributions need to be updated: Send notification with link to Google Sheet to VP -> upon update -> identify teams (and employees) assigned to VP -> create new legal documents (keep history)
+    - Ensure new approach beats baseline by statistically significant margin
+- Reasoning: Benefits are low (efficiency?), risk are high (legally binding documents containing false KPIs distributions) and processed is deterministic
+- Advice: Don't use AI within the process - use AI to build tools to automate it instead
+
+### Customer Care Insights for Heartbeat App
+
+- Problem: Despite plethora of customer care tickets, very little insight is extracted to improve app
+- Assumptions:
+    - Weekly export of all app-related tickets is available
+    - Customer care is willing to adopt its processes
+- Approach:
+    - Define baseline for current process: How many tickets are identified per week? Of those identified: How many do actually contain valid insights?
+    - Step 0: Keep granular ticket category as it works well for customer care
+    - Step 1: Ask team responsible for app on what they are looking for (we might automate this by looking at potential features on the roadmap, bug reports, specific usage or error metrics)
+    - Step 2: Ask Customer Care to collect additional information (specified by app team) for relevant tickets (e.g. via runbook)
+    - Step 3: Schedule batch job using LLM with customized config (adapted system prompt, moderate-to-high reasoning effort) to scan  through all relevant tickets and generate a report containing: Issue patterns, root cause, options for mitigation
+    - Step 4: Send report to app team
+    - Step N: Use Coding agent to implement draft for fixes/features directly
+    - Step N+1: Let AI agent handle (written) customer care for relevant tickets to maximize information gain
+- Reasoning: tbd
+- Advice: tbd
