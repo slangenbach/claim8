@@ -1,0 +1,62 @@
+---
+title: Core pillars of the AI Strategy
+author: "Stefan Langenbach"
+date: "2026-03-16"
+lang: en-US
+format:
+    typst:
+        papersize: a4
+        margin:
+            x: 2cm
+            y: 0cm
+        # TODO: Pick same font as reveal.js slides
+        # mainfont: "Roboto"
+        columns: 2
+        toc: false
+        number-sections: false
+        page-numbering: false
+
+---
+
+# Purpose
+
+Enable all employees to solve their domain-specific business challenges using AI.
+
+# Organization
+
+- Build a decentralized core team of 3 individuals to focus on use case identification, stakeholder management, and AI education?
+
+# Roadmap
+
+## Short (1-3 month)
+
+- Define
+- tbd
+
+## Mid (4 -8 months)
+
+## Long (9+ months)
+
+
+
+# Priority Business Areas
+
+Customer Care
+HR
+Software Engineering/IT
+
+# Success Metrics & KPIs
+
+- Focus on engagement, impact and momentum
+
+# Build-vs-buy
+
+- Timeline to value
+- Total Costs of Ownership
+- Lock-in risk
+
+# Stakeholder Management
+
+- C-Level: Briefings
+- TechOps: BI-weekly
+- Departments: Office Hours
