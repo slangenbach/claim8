@@ -1,0 +1,160 @@
+---
+title: "Case Studies in AI Lifecycle Management"
+subtitle: "Claim8"
+author: "Stefan Langenbach"
+date: "2026-03-16"
+slide-number: true
+lang: en-US
+format:
+    revealjs:
+        theme: dracula
+---
+
+## Agenda
+
+1. Case Studies (20min)
+    - Executive Summary
+    - Challenge
+    - Solution
+    - Assumptions
+    - Approach
+    - Reasoning
+    - Advice
+1. Discussion (20min)
+
+# Case Studies
+
+# Target Agreements
+
+## Executive Summary
+
+Use AI to **build tools** to automate the process, not vice versa.
+
+## Challenge
+
+VPs and HR department are occupied with - potentially low value - administrative tasks for every new employee.
+
+## Solution
+
+Automate process as much as possible.
+
+## Assumptions
+
+- KPI distributions change **infrequently** (every quarter or less often)
+- Approval by VPs is **not** legally required, but used as a quality gate
+- Preparation of legal document mostly involves placing selected KPI distributions into the correct sections of the document (replacing placeholders)
+
+## Approach {.smaller}
+
+::: {.incremental}
+1. Verify assumptions
+1. Define a baseline for current process:
+    - What is the average end-to-end lead time of the process?
+    - How much time/effort is spent by VP/HR for each execution?
+    - How many errors occur for this process per year?
+1. Use AI to **build tools** to automate the process:
+    - Create employee in HR system
+    - Look up corresponding KPI distribution in database
+    - Verify KPI distribution is active
+        - If so, continue, else notify VP and request update
+    - Create new legal document from template and render KPIs in correct sections
+    - Send document to employee for electronic signature
+1. Ensure automated process beats baseline by statistically significant margin
+:::
+
+::: {.notes}
+- Using a database instead of Google Sheet allows us to keep history of KPI distributions (active from/to date)
+- If VP approval is legally required, create weekly? batch jobs for approval and send notification to VPs
+- If legal documents vary by role, create multiple templates, eventually using AI
+:::
+
+## Reasoning
+
+- Process is **deterministic** and of **low** complexity
+- Impact is driven by efficiency gains, not by economic value
+- Using AI would introduce non-deterministic behavior and incur additional costs (on top of infrastructure/system) for every execution
+
+## Advice
+
+- Don't use AI to support the process
+- Instead use AI to **build tools** to automate it
+
+# Customer Care Insights for Heartbeat App
+
+## Executive Summary
+
+Accelerate insight generation by using AI to identify and analyze relevant tickets.
+
+## Challenge
+
+Despite huge amount of tickets received by Customer Care team, very little **actionable** insight is extracted to improve app.
+
+::: {.notes}
+- This is not about the Customer Care team
+- Consequently it is not about handling customer requests with AI (neither by mail, nor by phone)
+- And further it is not a about improving tagging of tickets per se
+:::
+
+## Solution
+
+Use AI to analyze identify relevant tickets and extract insights on risks^[Bugs, bad UX/UI, etc.] and opportunities^[New features].
+
+## Assumptions
+
+- Weekly export of all app-related tickets is available
+- Team working on app only receives/reviews tickets tagged explicitly
+- Intuition tells app team that much more valuable information is available in other tickets
+- Customer Care is open to adapt its processes
+
+## Approach {.smaller}
+
+::: {.incremental}
+1. Verify assumptions
+1. Define a baseline for current process:
+    - How many relevant tickets are identified per week?
+    - Of those identified: How many do contain valid insights?
+    - Of those with valid insights: How many are actually acted on?
+1. Get feedback from app team on what kind of insights they are looking for
+1. Make Customer Care team collect additional information (as specified by app team) for relevant tickets
+1. Schedule weekly batch using AI with customized config to scan through all tickets to:
+    1. Identify relevant tickets
+    1. Identify insights (as specified by app team) by analyzing title, description, tag, history, etc.
+    1. Rank insights by frequency and impact
+    1. Compile a report containing relevant information
+    1. Bonus: Draft technical implementation for top 3 insights
+1. Send report to app team
+1. Ensure AI-supported process significantly beats baseline
+1. Keep monitoring relevant KPIs to improve/fix/sunset process
+:::
+
+::: {.notes}
+- Asking for kind of insights helps to steer LLM into the right direction
+- Asking for kind of insights *could* be automated by looking at potential features on the roadmap, bug reports and usage metrics
+- Customized config: Specific system prompt, increased reasoning effort, etc.
+- Collection of additional information *could* be automated by AI, if AI handles customer requests
+- Context generated during tickets opened via phone *could* be gathered by transcribing conversation
+- Classification of relevant tickets *could* be done by training and adapting traditional ML systems as well
+:::
+
+## Reasoning
+
+- Process is **non**-deterministic and of **high** complexity
+- Impact is driven by economic value
+- To generate insights, we need to use context from app team **and** sift through large amount of tickets: **AI excels at both** of those tasks
+
+::: {.notes}
+- Brand value / intangible assets for bugs; real cost savings for algorithm optimization
+:::
+
+## Advice
+
+- Use AI to support the process
+- Start with AI-powered insight generation
+- If that works (c.f. baseline) expand AI usage to additional process steps. e.g. drafting technical implementation for top insights
+- Keep AI-assisted Customer Care as a separate use case
+
+# Thank you {.smaller}
+
+No energy was wasted on AI inference to create this presentation.
+
+# Discussion
