@@ -1,13 +1,12 @@
 ---
 title: "Case Studies in AI Lifecycle Management"
-subtitle: "Claim8"
 author: "Stefan Langenbach"
 date: "2026-03-16"
-slide-number: true
 lang: en-US
 format:
     revealjs:
         theme: dracula
+        slide-number: true
 ---
 
 ## Agenda
