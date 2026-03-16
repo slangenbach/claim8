@@ -1,5 +1,5 @@
 ---
-title: "Case Studies in AI Lifecycle Management"
+title: "AI Strategy and Case Studies"
 author: "Stefan Langenbach"
 date: "2026-03-16"
 lang: en-US
@@ -11,8 +11,8 @@ format:
 
 ## Agenda
 
-1. Case Studies (20min)
-    - Executive Summary
+1. Strategy (10min)
+1. Case Studies (10min)
     - Challenge
     - Solution
     - Assumptions
@@ -21,13 +21,42 @@ format:
     - Advice
 1. Discussion (20min)
 
+# Strategy {.smaller}
+
+::: {.incremental}
+- Purpose: **Enable** all employees to generate value by solving domain-specific business challenges using AI **without** relying on centralized support
+- Organization: Build a small core team (3 individuals) focusing on use case identification, stakeholder management and AI **enablement**
+- Goals:
+    - Short: Define AI strategy and evaluation framework, identify key stakeholders and compile initial use case portfolio
+    - Mid: Implement 3 quick wins, enable 3 departments to realize value from AI, compile adoption playbooks
+    - Long: Realize economic value from AI and ultimately render the central team superfluous
+:::
+
+## Strategy continued {.smaller}
+
+::: {.incremental}
+- Priority Business Areas:
+    - Select areas based on **impact**, **feasibility** an **risk**
+    - Start with Customer Care and Software Engineering IT
+- Success Metrics & KPIs:
+    - Metrics focus on **engagement**, **impact**, **momentum** and **sentiment**
+    - Key Metric: Number of use cases shipped to production that deliver measurable economic value
+- Build-vs-Buy: Evaluate building vs. buying according to **costs** (TCO), **timeline** to value, risk of vendor **lock-in** and technology **maturity**
+- Stakeholder Management:
+    - **Transparency first** approach, enabling stakeholders to get information via self-service
+    - Communication cadence and format will vary by audience
+:::
+
+::: {.notes}
+- Priority Business Areas: Impact -> Economic value, feasibility -> data availability, risk -> AI making mistakes
+- Customer Care has huge potential, good data availability low risk; likewise for software engineering
+- Build-vs-Buy: AI is powerful, yet immature and insecure technology: Focus on lock-in risk and maturity
+- Stakeholder Management: C-Level briefings, JourFixe with departments close/affected by AI; Office hours for al teams; Physically visit every team
+:::
+
 # Case Studies
 
 # Target Agreements
-
-## Executive Summary
-
-Use AI to **build tools** to automate the process, not vice versa.
 
 ## Challenge
 
@@ -67,6 +96,18 @@ Automate process as much as possible.
 - If legal documents vary by role, create multiple templates, eventually using AI
 :::
 
+## Approach continued {.smaller} {visibility="hidden"}
+
+```{mermaid}
+flowchart LR
+  A(Create employee in HR system) --> B(Look up corresponding KPI distribution in database)
+  B --> C{Is KPI distribution active?}
+  C --> D(Create new legal document from template and render KPIs in correct sections)
+  C --> E[Notify VP and request update]
+  E --> C
+  D --> F(Send document to employee for electronic signature)
+```
+
 ## Reasoning
 
 - Process is **deterministic** and of **low** complexity
@@ -75,14 +116,9 @@ Automate process as much as possible.
 
 ## Advice
 
-- Don't use AI to support the process
-- Instead use AI to **build tools** to automate it
+- Use AI to **build tools** to automate the process, not vice versa.
 
 # Customer Care Insights for Heartbeat App
-
-## Executive Summary
-
-Accelerate insight generation by using AI to identify and analyze relevant tickets.
 
 ## Challenge
 
